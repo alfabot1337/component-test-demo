@@ -1,6 +1,10 @@
+import { FeatureNames } from '../core/featureToggles'
+
 export type Action = {
   type: string
   payload?: any
 }
 
-export interface RootState {}
+export type RootState = {
+  [key in FeatureNames]: boolean
+}
